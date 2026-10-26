@@ -8,7 +8,7 @@ from typing import List
 
 from ..config import Config
 from ..models import Document, TextBlock
-from ..normalize import build_sentences, clean_text, mark_reference_sections
+from ..normalize import build_sentences, clean_text, english_ratio, mark_reference_sections
 from .errors import ExtractionError
 
 log = logging.getLogger(__name__)
@@ -68,6 +68,12 @@ def load_document(path: Path, input_dir: str, cfg: Config) -> Document:
         build_sentences(doc)
         if not doc.sentences:
             raise ExtractionError("No sentences could be extracted")
+        text = " ".join(s.text for s in doc.sentences)
+        prose_words = [w for w in text.split() if w.isalpha() and len(w) >= 3]  # ignores tables of numbers
+        if len(prose_words) >= 15 and english_ratio(text) < 0.12:
+            # Models are English-only: still analyse, but tell the reviewer.
+            doc.warnings.append("Text appears to be non-English; English-only models make scores unreliable")
+            log.warning("%s: text appears to be non-English; scores may be unreliable", doc_id)
     except ExtractionError as exc:
         doc.status = "flagged"
         doc.warnings.append(str(exc))

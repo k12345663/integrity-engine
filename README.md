@@ -396,7 +396,7 @@ At 10k submissions the entire GPU work fits in **~3–5 T4-hours**. On spot g4dn
 4. **Web search.** This is simulated with a committed Wikipedia snapshot (the brief allows this). A live Wikipedia search is available via `--online`.
 5. **DOCX page numbers** are estimated when the file has no page-break markers, and the report says so.
 6. **AI likelihood** is an advisory indicator. It is never sufficient alone for a HIGH rating and is not estimated for texts under 120 words.
-7. **Language.** All models are English-only; non-English submissions would need multilingual embeddings and ASR.
+7. **Language.** All models are English-only. Non-English text is still analysed, but the report carries a warning that its scores are unreliable; real support would need multilingual embeddings and ASR.
 8. **Video.** Only the audio track is analysed. On-screen slide text would need OCR on keyframes (future work).
 
 ## 10. Limitations

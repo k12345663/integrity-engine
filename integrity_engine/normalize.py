@@ -72,6 +72,47 @@ def words(text: str) -> List[str]:
     return _WORD_RE.findall(text.lower())
 
 
+_ENGLISH_STOPWORDS = {
+    "the",
+    "a",
+    "an",
+    "and",
+    "or",
+    "of",
+    "to",
+    "in",
+    "on",
+    "for",
+    "with",
+    "is",
+    "are",
+    "was",
+    "were",
+    "be",
+    "it",
+    "this",
+    "that",
+    "as",
+    "by",
+    "at",
+    "from",
+    "we",
+    "our",
+    "they",
+    "their",
+    "not",
+    "but",
+    "if",
+    "so",
+}
+
+
+def english_ratio(text: str) -> float:
+    """Share of tokens that are common English function words (~0.3-0.5 for English prose)."""
+    toks = words(text)
+    return sum(t in _ENGLISH_STOPWORDS for t in toks) / len(toks) if toks else 0.0
+
+
 def layout_key(line: str) -> str:
     """Key used to spot repeated headers/footers ("Page 3" == "Page 7")."""
     return re.sub(r"\d+", "#", line.strip().lower())

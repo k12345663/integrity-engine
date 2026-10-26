@@ -92,5 +92,12 @@ def test_risk_bands():
     assert risk_level(2, 3, 20, cfg) == "LOW"
 
 
+def test_english_ratio_flags_non_english():
+    from integrity_engine.normalize import english_ratio
+
+    assert english_ratio("The team argues that the pilot is a cheap way to learn about the market.") > 0.3
+    assert english_ratio("La movilidad urbana en Pune está creciendo rápidamente y VoltRide debería expandirse.") < 0.12
+
+
 def test_timestamp_format():
     assert format_timestamp(24.4) == "00:00:24" and format_timestamp(3725) == "01:02:05"
