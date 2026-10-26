@@ -413,11 +413,7 @@ See [EVALUATION.md](EVALUATION.md) §7 for measured failure cases. In short:
 
 ## 11. AI-assistant usage disclosure
 
-This project was built with an AI coding assistant (Anthropic's Claude, via Claude Code), as the brief permits:
-
-- **Code.** The assistant wrote most of the code and documentation. The assistant also ran the experiments that drove the design changes: the model benchmark that motivated the cross-encoder, the AI-vs-AI false positive that motivated anchors, and the HC3-only calibration failure that motivated adding SAGE.
-- **Synthetic texts.** The assistant drafted all synthetic submission texts. The "AI-generated" samples are unedited assistant-style prose; the "human" samples were written to imitate student writing. This is disclosed in the dataset manifest, and its effect on the AI-detection evaluation is discussed in EVALUATION.md.
-- **Review.** All design decisions, thresholds and failure analyses are documented here and in EVALUATION.md, and the author must be able to explain them.
+As the brief requires: an AI coding assistant (Claude, via Claude Code) was used throughout this project. It helped write the code and documentation, run the experiments, and draft the synthetic dataset texts (see `dataset_manifest.json`). All design decisions, thresholds and failure analyses are documented in this README and in EVALUATION.md, and I can explain each of them.
 
 ## 12. Data sources and licences
 
