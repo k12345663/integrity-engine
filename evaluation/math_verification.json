@@ -1,0 +1,66 @@
+{
+  "n_vectors": 176,
+  "dimension": 384,
+  "checks": {
+    "T1 unit norm": {
+      "pass": true,
+      "detail": "max | ||e|| - 1 | = 1.23e-07"
+    },
+    "T2 dot(unit) = cosine(raw)": {
+      "pass": true,
+      "detail": "max difference = 2.45e-07"
+    },
+    "T3 -1 <= cos <= 1": {
+      "pass": true,
+      "detail": "min = -0.1527, max = 1.0000"
+    },
+    "T3b Gram matrix symmetric, diag = 1": {
+      "pass": true,
+      "detail": "max |G - G^T| = 0.00e+00"
+    },
+    "T4 Gram matrix PSD": {
+      "pass": true,
+      "detail": "smallest eigenvalue = -1.08e-15; rank = 135 <= d = 384"
+    },
+    "T5 ||a-b||^2 = 2 - 2cos": {
+      "pass": true,
+      "detail": "max error = 4.79e-07"
+    },
+    "T5b IP ranking == L2 ranking": {
+      "pass": true,
+      "detail": "top-50 neighbours identical"
+    },
+    "T6 angle triangle inequality": {
+      "pass": true,
+      "detail": "20,000 triples, min slack = 0.00e+00 rad"
+    },
+    "T7 anisotropy (mean cross-doc cosine > 0)": {
+      "pass": true,
+      "detail": "mean cosine between sentences of different files = 0.181 (orthogonal would be 0); ||mean vector|| = 0.433"
+    },
+    "T7b P is an orthogonal projector": {
+      "pass": true,
+      "detail": "P^2 = P, P^T = P, P u = 0"
+    },
+    "T7c projection reduces baseline similarity": {
+      "pass": true,
+      "detail": "mean cross-doc cosine 0.181 -> -0.008 after removing the common direction"
+    },
+    "T8 random unit vectors ~ orthogonal": {
+      "pass": true,
+      "detail": "mean = -0.0000, std = 0.0510 vs theory 1/sqrt(d) = 0.0510"
+    },
+    "T9 FAISS IndexFlatIP == exact cosine": {
+      "pass": true,
+      "detail": "max difference = 8.49e-08; top score is always 1 (the vector itself or an exact duplicate - 22/50 ties with identical template sentences), which is why self-matches must be excluded"
+    },
+    "T10 AI score is bounded away from 0 and 100": {
+      "pass": true,
+      "detail": "logit in [-13.53, 14.59] -> AI% in [1.3e-04, 100 - 4.6e-05]"
+    },
+    "T11 3/3 recall lower 95% bound": {
+      "pass": true,
+      "detail": "(0.025)^(1/3) = 0.292"
+    }
+  }
+}

@@ -25,7 +25,7 @@ All numbers below are reproduced by `python evaluate.py`, which writes [`evaluat
 - **Hardware:** Apple M5 laptop, CPU only.
 - **Default config:** `config/default.yaml`.
 - **Runtime:** a full run over 15 files takes **33 s** with warm model caches. Whisper `base.en` transcribes the 28 s clip in 1.6 s. The cross-encoder scored 799 window pairs in the whole run (387 in v1; leave-one-out attribution roughly doubles the calls).
-- **Clean installs:** fresh environments built from `requirements.txt` on Python 3.9.25 and 3.12.15 both pass all 17 tests and produce identical reports.
+- **Clean installs:** fresh environments built from `requirements.txt` on Python 3.9.25 and 3.12.15 both pass all tests and produce identical reports.
 
 ## 2. Headline results
 

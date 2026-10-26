@@ -1,6 +1,6 @@
 PY ?= python
 
-.PHONY: setup models run evaluate benchmark test dataset calibrate clean
+.PHONY: setup models run evaluate benchmark verify-math test dataset calibrate clean
 
 setup:            ## install dependencies
 	$(PY) -m pip install -r requirements.txt
@@ -16,6 +16,9 @@ evaluate:         ## metrics, baselines, ablations -> evaluation/
 
 benchmark:        ## out-of-sample paraphrase benchmark on MRPC + PAWS
 	$(PY) scripts/benchmark_public_paraphrase.py
+
+verify-math:      ## check the proofs in docs/MATHEMATICS.md on the real embeddings
+	$(PY) scripts/verify_math.py
 
 test:
 	$(PY) -m pytest -q tests

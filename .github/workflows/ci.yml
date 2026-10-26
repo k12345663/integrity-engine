@@ -25,7 +25,7 @@ jobs:
       - name: Lint
         run: ruff check . && ruff format --check .
       - name: Unit tests
-        run: pytest -q tests/test_units.py
+        run: pytest -q tests/test_units.py tests/test_math.py
 
   end-to-end:
     # Full pipeline on the sample corpus + edge-case suite (downloads ~1.6 GB of models, cached).

@@ -11,7 +11,7 @@ A Python pipeline that ingests PDF, DOCX and MP4 submissions and does four thing
 python run_integrity_check.py --input_dir ./sample_submissions --output_dir ./reports
 ```
 
-**Results on the bundled ground-truth corpus** (details and caveats in [EVALUATION.md](EVALUATION.md)):
+**Results on the bundled ground-truth corpus** (details and caveats in [EVALUATION.md](EVALUATION.md); the underlying mathematics, with proofs checked on the real system, is in [docs/MATHEMATICS.md](docs/MATHEMATICS.md)):
 
 | Check | Result |
 |---|---|
@@ -48,7 +48,7 @@ python run_integrity_check.py --input_dir ./sample_submissions --output_dir ./re
 
 ## 1. Setup
 
-Requires Python 3.9+. Clean installs were verified on Python 3.9.25 and 3.12.15 (macOS arm64, CPU only): all 17 tests pass and the outputs are identical. CI runs on both versions (`.github/workflows/ci.yml`). No system packages are needed: `imageio-ffmpeg` ships a static ffmpeg binary.
+Requires Python 3.9+. Clean installs were verified on Python 3.9.25 and 3.12.15 (macOS arm64, CPU only): all tests pass and the outputs are identical. CI runs on both versions (`.github/workflows/ci.yml`). No system packages are needed: `imageio-ffmpeg` ships a static ffmpeg binary.
 
 ```bash
 python -m venv .venv && source .venv/bin/activate
@@ -80,7 +80,8 @@ python run_integrity_check.py --input_dir DIR --output_dir OUT \
     --set matching.sentence_threshold=0.85
     --no_ai                          # skip AI-likelihood estimation
 
-make test        # 17 unit + end-to-end edge-case tests
+make test        # unit, math-property and end-to-end edge-case tests
+make verify-math # prove the maths numerically on the real embeddings (15 checks)
 make evaluate    # metrics vs ground truth, baselines, ablations, threshold sweeps -> evaluation/
 make dataset     # regenerate the synthetic corpus (macOS `say` or espeak-ng for speech)
 make calibrate   # refit the AI-likelihood combiner on HC3 + SAGE
@@ -125,6 +126,7 @@ scripts/                      dataset builder, KB fetcher, calibration, model + 
 tests/                        unit tests + hidden-edge-case end-to-end tests
 reports/                      reports produced by the root command on the sample corpus
 evaluation/                   results.md / results.json (evaluate.py), public_paraphrase.md (MRPC/PAWS)
+docs/MATHEMATICS.md           the maths behind the engine, with proofs, verified on the real system
 ```
 
 ## 4. Architecture
