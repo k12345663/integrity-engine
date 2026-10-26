@@ -1,0 +1,35 @@
+{
+  "document_id": "corrupt_14.docx",
+  "modality": "docx",
+  "status": "flagged",
+  "total_integrity_risk": "UNASSESSED",
+  "scores": {
+    "peer_similarity_percentage": 0.0,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": null
+  },
+  "peer_matches": [],
+  "multimodal_matches": [],
+  "external_matches": [],
+  "boilerplate_overlaps": [],
+  "ai_analysis": {
+    "probability": null,
+    "reason": "File could not be processed"
+  },
+  "explanations": "File could not be analysed and needs manual review: DOCX is corrupted or not an Office Open XML file",
+  "score_details": {
+    "scoring_words": 0,
+    "boilerplate_words_excluded": 0,
+    "reference_words_excluded": 0,
+    "per_source_peer": {},
+    "per_source_external": {},
+    "top_peer_source": null
+  },
+  "warnings": [
+    "DOCX is corrupted or not an Office Open XML file"
+  ],
+  "metadata": {
+    "size_bytes": 700,
+    "extraction_seconds": 0.05
+  }
+}

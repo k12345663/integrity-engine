@@ -1,0 +1,290 @@
+{
+  "run": {
+    "input_dir": "sample_submissions",
+    "documents_total": 15,
+    "documents_ok": 12,
+    "documents_flagged": 3,
+    "reference_documents": 11,
+    "boilerplate": {
+      "df_threshold": 3,
+      "documents": 12,
+      "sentences_marked": 45
+    },
+    "anchors": {
+      "anchor_max_df": 3,
+      "distinct_anchors": 643
+    },
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "cross_encoder_model": "cross-encoder/stsb-distilroberta-base",
+    "cross_encoder_pairs_scored": 799,
+    "runtime_seconds": 29.989343404769897,
+    "config": {
+      "chunking": {
+        "max_tokens": 200,
+        "min_tokens": 40,
+        "overlap_sentences": 1
+      },
+      "embedding": {
+        "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+        "batch_size": 64,
+        "device": null
+      },
+      "matching": {
+        "top_k": 10,
+        "chunk_candidate_threshold": 0.55,
+        "sentence_threshold": 0.8,
+        "cross_encoder_model": "cross-encoder/stsb-distilroberta-base",
+        "window_sizes": [
+          2,
+          3
+        ],
+        "window_prefilter": 0.6,
+        "cross_encoder_threshold": 0.6,
+        "window_cosine_fallback": 0.85,
+        "require_anchor": true,
+        "anchor_max_doc_fraction": 0.1,
+        "cross_encoder_strong": 0.8,
+        "loo_attribution": true,
+        "loo_margin": 0.0,
+        "min_sentence_words": 6,
+        "min_passage_sentences": 2,
+        "single_sentence_threshold": 0.9,
+        "single_sentence_min_words": 12,
+        "max_matches_reported": 15,
+        "index_type": "flat"
+      },
+      "boilerplate": {
+        "enabled": true,
+        "near_duplicate_threshold": 0.92,
+        "min_doc_frequency": 3,
+        "min_doc_fraction": 0.25,
+        "template_dir": null
+      },
+      "external": {
+        "reference_dir": "reference_corpus",
+        "online": false,
+        "online_timeout": 8.0,
+        "online_cache_dir": ".cache/online_reference",
+        "online_queries_per_doc": 3
+      },
+      "ai": {
+        "enabled": true,
+        "perplexity_model": "gpt2",
+        "classifier_model": "openai-community/roberta-base-openai-detector",
+        "min_words": 120,
+        "max_tokens": 2048,
+        "calibration_file": "config/ai_calibration.json"
+      },
+      "asr": {
+        "model_name": "base.en",
+        "silence_rms_threshold": 0.003,
+        "no_speech_prob_threshold": 0.6,
+        "min_words": 5
+      },
+      "risk": {
+        "high_peer": 30.0,
+        "high_external": 30.0,
+        "medium_peer": 10.0,
+        "medium_external": 10.0,
+        "ai_high": 80.0,
+        "ai_medium": 60.0
+      },
+      "supported_extensions": {
+        ".pdf": "pdf",
+        ".docx": "docx",
+        ".txt": "text",
+        ".md": "text",
+        ".mp4": "media",
+        ".mov": "media",
+        ".mkv": "media",
+        ".webm": "media",
+        ".m4a": "media",
+        ".mp3": "media",
+        ".wav": "media"
+      }
+    }
+  },
+  "documents": [
+    {
+      "document_id": "corrupt_14.docx",
+      "status": "flagged",
+      "total_integrity_risk": "UNASSESSED",
+      "peer_similarity_percentage": 0.0,
+      "external_similarity_percentage": 0.0,
+      "ai_generated_probability": null,
+      "top_peer_source": null,
+      "warnings": [
+        "DOCX is corrupted or not an Office Open XML file"
+      ]
+    },
+    {
+      "document_id": "empty_13.pdf",
+      "status": "flagged",
+      "total_integrity_risk": "UNASSESSED",
+      "peer_similarity_percentage": 0.0,
+      "external_similarity_percentage": 0.0,
+      "ai_generated_probability": null,
+      "top_peer_source": null,
+      "warnings": [
+        "File is empty (0 bytes)"
+      ]
+    },
+    {
+      "document_id": "pitch_10_sanjay.mp4",
+      "status": "ok",
+      "total_integrity_risk": "HIGH",
+      "peer_similarity_percentage": 81.2,
+      "external_similarity_percentage": 0.0,
+      "ai_generated_probability": null,
+      "top_peer_source": "sub_01_aarav.pdf",
+      "warnings": []
+    },
+    {
+      "document_id": "pitch_11_leela.mp4",
+      "status": "ok",
+      "total_integrity_risk": "LOW",
+      "peer_similarity_percentage": 0.0,
+      "external_similarity_percentage": 0.0,
+      "ai_generated_probability": null,
+      "top_peer_source": null,
+      "warnings": []
+    },
+    {
+      "document_id": "silent_12.mp4",
+      "status": "flagged",
+      "total_integrity_risk": "UNASSESSED",
+      "peer_similarity_percentage": 0.0,
+      "external_similarity_percentage": 0.0,
+      "ai_generated_probability": null,
+      "top_peer_source": null,
+      "warnings": [
+        "Video has no audio track; nothing to transcribe"
+      ]
+    },
+    {
+      "document_id": "sub_01_aarav.pdf",
+      "status": "ok",
+      "total_integrity_risk": "HIGH",
+      "peer_similarity_percentage": 44.3,
+      "external_similarity_percentage": 0.0,
+      "ai_generated_probability": 0.1,
+      "top_peer_source": "sub_02_meera.pdf",
+      "warnings": []
+    },
+    {
+      "document_id": "sub_02_meera.pdf",
+      "status": "ok",
+      "total_integrity_risk": "HIGH",
+      "peer_similarity_percentage": 45.2,
+      "external_similarity_percentage": 0.0,
+      "ai_generated_probability": 1.3,
+      "top_peer_source": "sub_01_aarav.pdf",
+      "warnings": []
+    },
+    {
+      "document_id": "sub_03_kabir.docx",
+      "status": "ok",
+      "total_integrity_risk": "HIGH",
+      "peer_similarity_percentage": 89.4,
+      "external_similarity_percentage": 0.0,
+      "ai_generated_probability": 0.1,
+      "top_peer_source": "sub_04_diya.docx",
+      "warnings": []
+    },
+    {
+      "document_id": "sub_04_diya.docx",
+      "status": "ok",
+      "total_integrity_risk": "HIGH",
+      "peer_similarity_percentage": 71.1,
+      "external_similarity_percentage": 0.0,
+      "ai_generated_probability": 0.1,
+      "top_peer_source": "sub_03_kabir.docx",
+      "warnings": []
+    },
+    {
+      "document_id": "sub_05_rohan.docx",
+      "status": "ok",
+      "total_integrity_risk": "LOW",
+      "peer_similarity_percentage": 0.0,
+      "external_similarity_percentage": 0.0,
+      "ai_generated_probability": 0.1,
+      "top_peer_source": null,
+      "warnings": []
+    },
+    {
+      "document_id": "sub_06_ananya.pdf",
+      "status": "ok",
+      "total_integrity_risk": "HIGH",
+      "peer_similarity_percentage": 0.0,
+      "external_similarity_percentage": 50.8,
+      "ai_generated_probability": 0.5,
+      "top_peer_source": null,
+      "warnings": []
+    },
+    {
+      "document_id": "sub_07_ishaan.docx",
+      "status": "ok",
+      "total_integrity_risk": "MEDIUM",
+      "peer_similarity_percentage": 0.0,
+      "external_similarity_percentage": 0.0,
+      "ai_generated_probability": 99.7,
+      "top_peer_source": null,
+      "warnings": []
+    },
+    {
+      "document_id": "sub_08_zara.pdf",
+      "status": "ok",
+      "total_integrity_risk": "LOW",
+      "peer_similarity_percentage": 0.0,
+      "external_similarity_percentage": 0.0,
+      "ai_generated_probability": 0.6,
+      "top_peer_source": null,
+      "warnings": []
+    },
+    {
+      "document_id": "sub_09_vikram.docx",
+      "status": "ok",
+      "total_integrity_risk": "LOW",
+      "peer_similarity_percentage": 0.0,
+      "external_similarity_percentage": 0.0,
+      "ai_generated_probability": 0.0,
+      "top_peer_source": null,
+      "warnings": []
+    },
+    {
+      "document_id": "sub_15_tanvi.pdf",
+      "status": "ok",
+      "total_integrity_risk": "MEDIUM",
+      "peer_similarity_percentage": 0.0,
+      "external_similarity_percentage": 0.0,
+      "ai_generated_probability": 86.1,
+      "top_peer_source": null,
+      "warnings": []
+    }
+  ],
+  "peer_similarity_matrix": {
+    "pitch_10_sanjay.mp4": {
+      "sub_01_aarav.pdf": 81.2
+    },
+    "pitch_11_leela.mp4": {},
+    "sub_01_aarav.pdf": {
+      "sub_02_meera.pdf": 26.6,
+      "pitch_10_sanjay.mp4": 17.7
+    },
+    "sub_02_meera.pdf": {
+      "sub_01_aarav.pdf": 45.2
+    },
+    "sub_03_kabir.docx": {
+      "sub_04_diya.docx": 89.4
+    },
+    "sub_04_diya.docx": {
+      "sub_03_kabir.docx": 71.1
+    },
+    "sub_05_rohan.docx": {},
+    "sub_06_ananya.pdf": {},
+    "sub_07_ishaan.docx": {},
+    "sub_08_zara.pdf": {},
+    "sub_09_vikram.docx": {},
+    "sub_15_tanvi.pdf": {}
+  }
+}

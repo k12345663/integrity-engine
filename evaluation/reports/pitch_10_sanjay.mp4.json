@@ -1,0 +1,94 @@
+{
+  "document_id": "pitch_10_sanjay.mp4",
+  "modality": "media",
+  "status": "ok",
+  "total_integrity_risk": "HIGH",
+  "scores": {
+    "peer_similarity_percentage": 81.2,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": null
+  },
+  "peer_matches": [],
+  "multimodal_matches": [
+    {
+      "matched_file": "sub_01_aarav.pdf",
+      "similarity_score": 0.822,
+      "sentence_similarity": 0.951,
+      "evidence": "sentence cosine + cross-encoder verified paraphrase",
+      "lexical_overlap_jaccard": 0.764,
+      "match_type": "verbatim",
+      "query_passage": "Our recommendation is to stay in Pune for the next 18 months and build a dense battery swapping network before chasing new cities. Right now each scooter spends almost 40 minutes a day of the road waiting for a van to collect and recharge it. And that idle time is the biggest reason the fleet unsolittle. 20 swap stations near the busiest pickup zones would lift utilization from 5.1 to 6.4 rides per scooter per day.",
+      "matched_passage": "Our recommendation is to stay in Pune for the next eighteen months and build a dense battery-swapping network before chasing new cities. Right now each scooter spends almost forty minutes a day off the road waiting for a van to collect and recharge it, and that idle time is the biggest reason the fleet earns so little. Twenty swap stations near the busiest pickup zones would lift utilisation from 5.1 to 6.4 rides per scooter per day.",
+      "location": {
+        "query_timestamp": "00:00:04 - 00:00:24",
+        "matched_page": 2,
+        "matched_paragraph": 8
+      },
+      "sentence_alignment": [
+        {
+          "query_sentence": "Our recommendation is to stay in Pune for the next 18 months and build a dense battery swapping network before chasing new cities.",
+          "matched_sentence": "Our recommendation is to stay in Pune for the next eighteen months and build a dense battery-swapping network before chasing new cities.",
+          "score": 0.993,
+          "method": "direct",
+          "sentence_cosine": 0.993
+        },
+        {
+          "query_sentence": "Right now each scooter spends almost 40 minutes a day of the road waiting for a van to collect and recharge it.",
+          "matched_sentence": "Right now each scooter spends almost forty minutes a day off the road waiting for a van to collect and recharge it, and that idle time is the biggest reason the fleet earns so little.",
+          "score": 0.875,
+          "method": "direct",
+          "sentence_cosine": 0.875
+        },
+        {
+          "query_sentence": "And that idle time is the biggest reason the fleet unsolittle.",
+          "matched_sentence": "Right now each scooter spends almost forty minutes a day off the road waiting for a van to collect and recharge it, and that idle time is the biggest reason the fleet earns so little.",
+          "score": 0.952,
+          "method": "verified",
+          "sentence_cosine": 0.502
+        },
+        {
+          "query_sentence": "20 swap stations near the busiest pickup zones would lift utilization from 5.1 to 6.4 rides per scooter per day.",
+          "matched_sentence": "Twenty swap stations near the busiest pickup zones would lift utilisation from 5.1 to 6.4 rides per scooter per day.",
+          "score": 0.986,
+          "method": "direct",
+          "sentence_cosine": 0.986
+        }
+      ],
+      "modalities": "media -> pdf",
+      "query_words": 78
+    }
+  ],
+  "external_matches": [],
+  "boilerplate_overlaps": [],
+  "ai_analysis": {
+    "probability": null,
+    "reason": "Insufficient original text for a reliable estimate (94 < 120 words)"
+  },
+  "explanations": "81.2% of the original text overlaps with other submissions: sub_01_aarav.pdf (81.2%). Strongest evidence: 00:00:04 - 00:00:24 <-> sub_01_aarav.pdf p.2 (verbatim, cos 0.82). AI-content likelihood not estimated: Insufficient original text for a reliable estimate (94 < 120 words). Overall risk: HIGH.",
+  "score_details": {
+    "scoring_words": 96,
+    "boilerplate_words_excluded": 0,
+    "reference_words_excluded": 0,
+    "per_source_peer": {
+      "sub_01_aarav.pdf": 81.2
+    },
+    "per_source_external": {},
+    "top_peer_source": "sub_01_aarav.pdf",
+    "chunks_indexed": 1,
+    "thresholds": {
+      "chunk_candidate": 0.55,
+      "sentence_direct": 0.8,
+      "cross_encoder": 0.6,
+      "min_passage_sentences": 2
+    }
+  },
+  "warnings": [],
+  "metadata": {
+    "size_bytes": 349205,
+    "duration_seconds": 28.13,
+    "audio_rms": 0.10404,
+    "asr_model": "whisper-base.en",
+    "asr_segments_dropped": 0,
+    "extraction_seconds": 1.57
+  }
+}

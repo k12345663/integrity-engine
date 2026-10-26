@@ -1,0 +1,177 @@
+{
+  "document_id": "sub_01_aarav.pdf",
+  "modality": "pdf",
+  "status": "ok",
+  "total_integrity_risk": "HIGH",
+  "scores": {
+    "peer_similarity_percentage": 44.3,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": 0.1
+  },
+  "peer_matches": [
+    {
+      "matched_file": "sub_02_meera.pdf",
+      "similarity_score": 0.947,
+      "sentence_similarity": 1.0,
+      "evidence": "sentence cosine",
+      "lexical_overlap_jaccard": 1.0,
+      "match_type": "verbatim",
+      "query_passage": "Pune Municipal Corporation has already capped dockless fleets in the old city wards, and a stricter parking rule could force us to build designated parking bays at our own cost. We would reduce this exposure by co-funding thirty marked parking hubs with the corporation and sharing anonymised trip data with its traffic cell, which turns the regulator into a partner rather than an opponent. The second risk is battery degradation. Swap stations cycle batteries harder than overnight depot charging, and if pack life falls below eight hundred cycles the station economics break down. A leasing contract with the battery supplier, priced per kilowatt-hour delivered rather than per pack, moves this risk onto the party that understands the chemistry best.",
+      "matched_passage": "Pune Municipal Corporation has already capped dockless fleets in the old city wards, and a stricter parking rule could force us to build designated parking bays at our own cost. We would reduce this exposure by co-funding thirty marked parking hubs with the corporation and sharing anonymised trip data with its traffic cell, which turns the regulator into a partner rather than an opponent. The second risk is battery degradation. Swap stations cycle batteries harder than overnight depot charging, and if pack life falls below eight hundred cycles the station economics break down. A leasing contract with the battery supplier, priced per kilowatt-hour delivered rather than per pack, moves this risk onto the party that understands the chemistry best.",
+      "location": {
+        "query_page": 2,
+        "query_paragraph": 10,
+        "matched_page": 2,
+        "matched_paragraph": 8
+      },
+      "sentence_alignment": [
+        {
+          "query_sentence": "Pune Municipal Corporation has already capped dockless fleets in the old city wards, and a stricter parking rule could force us to build designated parking bays at our own cost.",
+          "matched_sentence": "Pune Municipal Corporation has already capped dockless fleets in the old city wards, and a stricter parking rule could force us to build designated parking bays at our own cost.",
+          "score": 1.0,
+          "method": "direct",
+          "sentence_cosine": 1.0
+        },
+        {
+          "query_sentence": "We would reduce this exposure by co-funding thirty marked parking hubs with the corporation and sharing anonymised trip data with its traffic cell, which turns the regulator into a partner rather than an opponent.",
+          "matched_sentence": "We would reduce this exposure by co-funding thirty marked parking hubs with the corporation and sharing anonymised trip data with its traffic cell, which turns the regulator into a partner rather than an opponent.",
+          "score": 1.0,
+          "method": "direct",
+          "sentence_cosine": 1.0
+        },
+        {
+          "query_sentence": "The second risk is battery degradation.",
+          "matched_sentence": "The second risk is battery degradation.",
+          "score": 1.0,
+          "method": "direct",
+          "sentence_cosine": 1.0
+        },
+        {
+          "query_sentence": "Swap stations cycle batteries harder than overnight depot charging, and if pack life falls below eight hundred cycles the station economics break down.",
+          "matched_sentence": "Swap stations cycle batteries harder than overnight depot charging, and if pack life falls below eight hundred cycles the station economics break down.",
+          "score": 1.0,
+          "method": "direct",
+          "sentence_cosine": 1.0
+        },
+        {
+          "query_sentence": "A leasing contract with the battery supplier, priced per kilowatt-hour delivered rather than per pack, moves this risk onto the party that understands the chemistry best.",
+          "matched_sentence": "A leasing contract with the battery supplier, priced per kilowatt-hour delivered rather than per pack, moves this risk onto the party that understands the chemistry best.",
+          "score": 1.0,
+          "method": "direct",
+          "sentence_cosine": 1.0
+        }
+      ],
+      "modalities": "pdf -> pdf",
+      "query_words": 119
+    }
+  ],
+  "multimodal_matches": [
+    {
+      "matched_file": "pitch_10_sanjay.mp4",
+      "similarity_score": 0.822,
+      "sentence_similarity": 0.951,
+      "evidence": "sentence cosine",
+      "lexical_overlap_jaccard": 0.69,
+      "match_type": "near-verbatim (light edits)",
+      "query_passage": "Our recommendation is to stay in Pune for the next eighteen months and build a dense battery-swapping network before chasing new cities. Right now each scooter spends almost forty minutes a day off the road waiting for a van to collect and recharge it, and that idle time is the biggest reason the fleet earns so little. Twenty swap stations near the busiest pickup zones would lift utilisation from 5.1 to 6.4 rides per scooter per day.",
+      "matched_passage": "Our recommendation is to stay in Pune for the next 18 months and build a dense battery swapping network before chasing new cities. Right now each scooter spends almost 40 minutes a day of the road waiting for a van to collect and recharge it. 20 swap stations near the busiest pickup zones would lift utilization from 5.1 to 6.4 rides per scooter per day.",
+      "location": {
+        "query_page": 2,
+        "query_paragraph": 8,
+        "matched_timestamp": "00:00:04 - 00:00:24"
+      },
+      "sentence_alignment": [
+        {
+          "query_sentence": "Our recommendation is to stay in Pune for the next eighteen months and build a dense battery-swapping network before chasing new cities.",
+          "matched_sentence": "Our recommendation is to stay in Pune for the next 18 months and build a dense battery swapping network before chasing new cities.",
+          "score": 0.993,
+          "method": "direct",
+          "sentence_cosine": 0.993
+        },
+        {
+          "query_sentence": "Right now each scooter spends almost forty minutes a day off the road waiting for a van to collect and recharge it, and that idle time is the biggest reason the fleet earns so little.",
+          "matched_sentence": "Right now each scooter spends almost 40 minutes a day of the road waiting for a van to collect and recharge it.",
+          "score": 0.875,
+          "method": "direct",
+          "sentence_cosine": 0.875
+        },
+        {
+          "query_sentence": "Twenty swap stations near the busiest pickup zones would lift utilisation from 5.1 to 6.4 rides per scooter per day.",
+          "matched_sentence": "20 swap stations near the busiest pickup zones would lift utilization from 5.1 to 6.4 rides per scooter per day.",
+          "score": 0.986,
+          "method": "direct",
+          "sentence_cosine": 0.986
+        }
+      ],
+      "modalities": "pdf -> media",
+      "query_words": 79
+    }
+  ],
+  "external_matches": [],
+  "boilerplate_overlaps": [
+    {
+      "passage": "Case Prompt - Inter-University Strategy Challenge 2026, Round 2. VoltRide Mobility operates 1,800 dockless electric scooters in Pune and completed 410,000 rides in the last financial year. The founders must decide whether to expand into three tier-2 cities (Nagpur, Indore and Coimbatore) within eighteen months or to deepen operations in Pune by adding battery-swapping stations and corporate subscriptions. Teams must assess market attractiveness, unit economics per scooter, regulatory risk and the funding required for each option. Your submission must recommend one option, justify it with quantitative reasoning, identify the three largest risks and propose mitigation measures for each. Answers should not exceed 1,500 words excluding this prompt. Use only the case exhibits and publicly available sources, and cite every external source you rely on. Submissions will be scored on insight, rigour, feasibility and clarity of communication.",
+      "words": 138,
+      "shared_with_documents": 5,
+      "location": {
+        "query_page": 1,
+        "query_paragraph": 2
+      }
+    },
+    {
+      "passage": "VoltRide Mobility Case Exhibits 1-4, Inter-University Strategy Challenge 2026.",
+      "words": 9,
+      "shared_with_documents": 5,
+      "location": {
+        "query_page": 2,
+        "query_paragraph": 14
+      }
+    }
+  ],
+  "ai_analysis": {
+    "probability": 0.1,
+    "method": "logistic regression calibrated on HC3 + SAGE (GPT-4.1 / Claude 3.7 / Gemini 2.5) (CV AUROC 0.91)",
+    "logit_contributions": {
+      "log_perplexity": -2.671,
+      "burstiness": -3.406,
+      "marker_rate": -1.187,
+      "classifier": -0.136
+    },
+    "intercept": 0.531,
+    "signals": {
+      "marker_rate": 0.0,
+      "log_perplexity": 4.4481,
+      "perplexity": 85.4605,
+      "burstiness": 1.5204,
+      "tokens_scored": 515,
+      "classifier": 0.0003
+    },
+    "words_analysed": 444
+  },
+  "explanations": "44.3% of the original text overlaps with other submissions: sub_02_meera.pdf (26.6%), pitch_10_sanjay.mp4 (17.7%). Strongest evidence: p.2 <-> sub_02_meera.pdf p.2 (verbatim, cos 0.95); p.2 <-> pitch_10_sanjay.mp4 00:00:04 - 00:00:24 (near-verbatim, cos 0.82). 147 words of shared template/prompt text were detected and excluded from scoring. AI-content likelihood 0%; strongest signal: burstiness; advisory only - corroborate before acting. Overall risk: HIGH.",
+  "score_details": {
+    "scoring_words": 447,
+    "boilerplate_words_excluded": 147,
+    "reference_words_excluded": 12,
+    "per_source_peer": {
+      "sub_02_meera.pdf": 26.6,
+      "pitch_10_sanjay.mp4": 17.7
+    },
+    "per_source_external": {},
+    "top_peer_source": "sub_02_meera.pdf",
+    "chunks_indexed": 4,
+    "thresholds": {
+      "chunk_candidate": 0.55,
+      "sentence_direct": 0.8,
+      "cross_encoder": 0.6,
+      "min_passage_sentences": 2
+    }
+  },
+  "warnings": [],
+  "metadata": {
+    "size_bytes": 5176,
+    "pages": 2,
+    "header_footer_blocks_removed": 4,
+    "extraction_seconds": 0.49
+  }
+}

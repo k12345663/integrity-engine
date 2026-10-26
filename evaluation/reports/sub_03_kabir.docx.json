@@ -1,0 +1,185 @@
+{
+  "document_id": "sub_03_kabir.docx",
+  "modality": "docx",
+  "status": "ok",
+  "total_integrity_risk": "HIGH",
+  "scores": {
+    "peer_similarity_percentage": 89.4,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": 0.1
+  },
+  "peer_matches": [
+    {
+      "matched_file": "sub_04_diya.docx",
+      "similarity_score": 0.802,
+      "sentence_similarity": 0.726,
+      "evidence": "cross-encoder verified paraphrase",
+      "lexical_overlap_jaccard": 0.242,
+      "match_type": "paraphrase (semantic match, low word overlap)",
+      "query_passage": "Kabir's team argues for a single-city pilot in Indore rather than an immediate three city rollout. The logic is about learning cheaply. A pilot of 300 scooters costs a fraction of a full launch and tells VoltRide whether its Pune playbook transfers to a smaller market before serious capital is committed. Indore suits a pilot for three reasons. The core of the city is flat, so batteries last longer per charge. Around 1.2 lakh students study within six kilometres of Vijay Nagar, which gives a dense base of short trips. And no shared scooter operator is active there yet, so early riders will form habits around VoltRide's app. We would run the pilot through a franchise partner who owns the scooters while VoltRide supplies the software, the brand and the maintenance standards. This keeps the balance sheet light, and the partner carries the depreciation risk. Our model shows payback for the partner in fourteen months at five rides per scooter per day. The decision rule after six months is simple. If rides per scooter exceed 4.5 and the damage rate stays under three percent, VoltRide signs franchise partners in Nagpur and Coimbatore.",
+      "matched_passage": "Team Diya - Test One City First The aim is inexpensive learning: trialling roughly three hundred e-scooters needs only a small share of the money a complete rollout would, and it reveals whether the operating model built in Pune works in a smaller city before large investments are made. There are three reasons Indore is a good test bed. Its central area has almost no slopes, which stretches battery range on every charge. About 120,000 college students live within a short ride of Vijay Nagar, producing lots of brief journeys. Finally, no rival sharing company operates in the city today, so the first users will build their routines around VoltRide. The trial would be operated by a local franchisee that buys the vehicles, while VoltRide provides the platform, branding and servicing rules. This approach keeps assets off VoltRide's books and shifts depreciation exposure to the franchisee, who by our estimates recovers the investment within about fourteen months if each scooter does five trips daily. After half a year, a clear threshold decides the next step. Should average trips per vehicle pass 4.5 while damage remains below 3%, the company recruits franchisees for Nagpur and Coimbatore; otherwise it brings the scooters home to Pune, having spent under ten million rupees.",
+      "location": {
+        "query_page": 1,
+        "query_page_range": "1-2",
+        "query_paragraph": 3,
+        "matched_page": 1,
+        "matched_page_range": "1-2",
+        "matched_paragraph": 1
+      },
+      "sentence_alignment": [
+        {
+          "query_sentence": "Kabir's team argues for a single-city pilot in Indore rather than an immediate three city rollout.",
+          "matched_sentence": "Team Diya - Test One City First",
+          "score": 0.802,
+          "method": "verified",
+          "sentence_cosine": 0.425
+        },
+        {
+          "query_sentence": "The logic is about learning cheaply.",
+          "matched_sentence": "The aim is inexpensive learning: trialling roughly three hundred e-scooters needs only a small share of the money a complete rollout would, and it reveals whether the operating model built in Pune works in a smaller city before large investments are made.",
+          "score": 0.803,
+          "method": "verified",
+          "sentence_cosine": 0.326
+        },
+        {
+          "query_sentence": "A pilot of 300 scooters costs a fraction of a full launch and tells VoltRide whether its Pune playbook transfers to a smaller market before serious capital is committed.",
+          "matched_sentence": "The aim is inexpensive learning: trialling roughly three hundred e-scooters needs only a small share of the money a complete rollout would, and it reveals whether the operating model built in Pune works in a smaller city before large investments are made.",
+          "score": 0.803,
+          "method": "verified",
+          "sentence_cosine": 0.638
+        },
+        {
+          "query_sentence": "Indore suits a pilot for three reasons.",
+          "matched_sentence": "There are three reasons Indore is a good test bed.",
+          "score": 0.803,
+          "method": "verified",
+          "sentence_cosine": 0.54
+        },
+        {
+          "query_sentence": "The core of the city is flat, so batteries last longer per charge.",
+          "matched_sentence": "Its central area has almost no slopes, which stretches battery range on every charge.",
+          "score": 0.672,
+          "method": "verified",
+          "sentence_cosine": 0.527
+        },
+        {
+          "query_sentence": "Around 1.2 lakh students study within six kilometres of Vijay Nagar, which gives a dense base of short trips.",
+          "matched_sentence": "About 120,000 college students live within a short ride of Vijay Nagar, producing lots of brief journeys.",
+          "score": 0.672,
+          "method": "verified",
+          "sentence_cosine": 0.754
+        },
+        {
+          "query_sentence": "And no shared scooter operator is active there yet, so early riders will form habits around VoltRide's app.",
+          "matched_sentence": "Finally, no rival sharing company operates in the city today, so the first users will build their routines around VoltRide.",
+          "score": 0.669,
+          "method": "verified",
+          "sentence_cosine": 0.63
+        },
+        {
+          "query_sentence": "We would run the pilot through a franchise partner who owns the scooters while VoltRide supplies the software, the brand and the maintenance standards.",
+          "matched_sentence": "The trial would be operated by a local franchisee that buys the vehicles, while VoltRide provides the platform, branding and servicing rules.",
+          "score": 0.751,
+          "method": "verified",
+          "sentence_cosine": 0.588
+        },
+        {
+          "query_sentence": "This keeps the balance sheet light, and the partner carries the depreciation risk.",
+          "matched_sentence": "This approach keeps assets off VoltRide's books and shifts depreciation exposure to the franchisee, who by our estimates recovers the investment within about fourteen months if each scooter does five trips daily.",
+          "score": 0.751,
+          "method": "verified",
+          "sentence_cosine": 0.401
+        },
+        {
+          "query_sentence": "Our model shows payback for the partner in fourteen months at five rides per scooter per day.",
+          "matched_sentence": "This approach keeps assets off VoltRide's books and shifts depreciation exposure to the franchisee, who by our estimates recovers the investment within about fourteen months if each scooter does five trips daily.",
+          "score": 0.751,
+          "method": "verified",
+          "sentence_cosine": 0.605
+        },
+        {
+          "query_sentence": "The decision rule after six months is simple.",
+          "matched_sentence": "After half a year, a clear threshold decides the next step.",
+          "score": 0.619,
+          "method": "verified",
+          "sentence_cosine": 0.563
+        },
+        {
+          "query_sentence": "If rides per scooter exceed 4.5 and the damage rate stays under three percent, VoltRide signs franchise partners in Nagpur and Coimbatore.",
+          "matched_sentence": "Should average trips per vehicle pass 4.5 while damage remains below 3%, the company recruits franchisees for Nagpur and Coimbatore; otherwise it brings the scooters home to Pune, having spent under ten million rupees.",
+          "score": 0.618,
+          "method": "verified",
+          "sentence_cosine": 0.572
+        }
+      ],
+      "modalities": "docx -> docx",
+      "query_words": 194
+    }
+  ],
+  "multimodal_matches": [],
+  "external_matches": [],
+  "boilerplate_overlaps": [
+    {
+      "passage": "Case Prompt - Inter-University Strategy Challenge 2026, Round 2. VoltRide Mobility operates 1,800 dockless electric scooters in Pune and completed 410,000 rides in the last financial year. The founders must decide whether to expand into three tier-2 cities (Nagpur, Indore and Coimbatore) within eighteen months or to deepen operations in Pune by adding battery-swapping stations and corporate subscriptions. Teams must assess market attractiveness, unit economics per scooter, regulatory risk and the funding required for each option. Your submission must recommend one option, justify it with quantitative reasoning, identify the three largest risks and propose mitigation measures for each. Answers should not exceed 1,500 words excluding this prompt. Use only the case exhibits and publicly available sources, and cite every external source you rely on. Submissions will be scored on insight, rigour, feasibility and clarity of communication.",
+      "words": 138,
+      "shared_with_documents": 5,
+      "location": {
+        "query_page": 1,
+        "query_paragraph": 2
+      }
+    },
+    {
+      "passage": "VoltRide Mobility Case Exhibits 1-4, Inter-University Strategy Challenge 2026.",
+      "words": 9,
+      "shared_with_documents": 5,
+      "location": {
+        "query_page": 2,
+        "query_paragraph": 8
+      }
+    }
+  ],
+  "ai_analysis": {
+    "probability": 0.1,
+    "method": "logistic regression calibrated on HC3 + SAGE (GPT-4.1 / Claude 3.7 / Gemini 2.5) (CV AUROC 0.91)",
+    "logit_contributions": {
+      "log_perplexity": -2.847,
+      "burstiness": -3.406,
+      "marker_rate": -1.187,
+      "classifier": -0.136
+    },
+    "intercept": 0.531,
+    "signals": {
+      "marker_rate": 0.0,
+      "log_perplexity": 4.5307,
+      "perplexity": 92.8239,
+      "burstiness": 1.2629,
+      "tokens_scored": 270,
+      "classifier": 0.0003
+    },
+    "words_analysed": 216
+  },
+  "explanations": "89.4% of the original text overlaps with other submissions: sub_04_diya.docx (89.4%). Strongest evidence: p.1 <-> sub_04_diya.docx p.1 (paraphrase, cos 0.80). 147 words of shared template/prompt text were detected and excluded from scoring. AI-content likelihood 0%; strongest signal: burstiness; advisory only - corroborate before acting. Overall risk: HIGH.",
+  "score_details": {
+    "scoring_words": 217,
+    "boilerplate_words_excluded": 147,
+    "reference_words_excluded": 12,
+    "per_source_peer": {
+      "sub_04_diya.docx": 89.4
+    },
+    "per_source_external": {},
+    "top_peer_source": "sub_04_diya.docx",
+    "chunks_indexed": 2,
+    "thresholds": {
+      "chunk_candidate": 0.55,
+      "sentence_direct": 0.8,
+      "cross_encoder": 0.6,
+      "min_passage_sentences": 2
+    }
+  },
+  "warnings": [],
+  "metadata": {
+    "size_bytes": 38989,
+    "page_numbers": "explicit_breaks",
+    "extraction_seconds": 0.0
+  }
+}

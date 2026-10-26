@@ -1,0 +1,116 @@
+{
+  "document_id": "sub_06_ananya.pdf",
+  "modality": "pdf",
+  "status": "ok",
+  "total_integrity_risk": "HIGH",
+  "scores": {
+    "peer_similarity_percentage": 0.0,
+    "external_similarity_percentage": 50.8,
+    "ai_generated_probability": 0.5
+  },
+  "peer_matches": [],
+  "multimodal_matches": [],
+  "external_matches": [
+    {
+      "matched_file": "Scooter-sharing system",
+      "similarity_score": 0.614,
+      "sentence_similarity": 1.0,
+      "evidence": "sentence cosine",
+      "lexical_overlap_jaccard": 1.0,
+      "match_type": "verbatim",
+      "query_passage": "A scooter-sharing system or kicksharing system is a shared transport service in which e-scooters are made available to use for short-term rentals. E-scooters are typically \"dockless,\" meaning that they do not have a fixed home location and are dropped off and picked up from certain locations in the service area. To rent a dockless e-scooter, users download a smartphone application. The application shows users a map of nearby e-scooters and enables them to unlock them. Scooters are equipped with built-in GPS chips and cellular connectivity which allows them to report their location in real time during a trip.",
+      "matched_passage": "A scooter-sharing system or kicksharing system is a shared transport service in which e-scooters are made available to use for short-term rentals. E-scooters are typically \"dockless,\" meaning that they do not have a fixed home location and are dropped off and picked up from certain locations in the service area. To rent a dockless e-scooter, users download a smartphone application. The application shows users a map of nearby e-scooters and enables them to unlock them. Scooters are equipped with built-in GPS chips and cellular connectivity which allows them to report their location in real time during a trip.",
+      "location": {
+        "query_page": 1,
+        "query_paragraph": 4,
+        "matched_source_url": "https://en.wikipedia.org/wiki/Scooter-sharing_system",
+        "matched_paragraph": 1
+      },
+      "sentence_alignment": [
+        {
+          "query_sentence": "A scooter-sharing system or kicksharing system is a shared transport service in which e-scooters are made available to use for short-term rentals.",
+          "matched_sentence": "A scooter-sharing system or kicksharing system is a shared transport service in which e-scooters are made available to use for short-term rentals.",
+          "score": 1.0,
+          "method": "direct",
+          "sentence_cosine": 1.0
+        },
+        {
+          "query_sentence": "E-scooters are typically \"dockless,\" meaning that they do not have a fixed home location and are dropped off and picked up from certain locations in the service area.",
+          "matched_sentence": "E-scooters are typically \"dockless,\" meaning that they do not have a fixed home location and are dropped off and picked up from certain locations in the service area.",
+          "score": 1.0,
+          "method": "direct",
+          "sentence_cosine": 1.0
+        },
+        {
+          "query_sentence": "To rent a dockless e-scooter, users download a smartphone application.",
+          "matched_sentence": "To rent a dockless e-scooter, users download a smartphone application.",
+          "score": 1.0,
+          "method": "direct",
+          "sentence_cosine": 1.0
+        },
+        {
+          "query_sentence": "The application shows users a map of nearby e-scooters and enables them to unlock them.",
+          "matched_sentence": "The application shows users a map of nearby e-scooters and enables them to unlock them.",
+          "score": 1.0,
+          "method": "direct",
+          "sentence_cosine": 1.0
+        },
+        {
+          "query_sentence": "Scooters are equipped with built-in GPS chips and cellular connectivity which allows them to report their location in real time during a trip.",
+          "matched_sentence": "Scooters are equipped with built-in GPS chips and cellular connectivity which allows them to report their location in real time during a trip.",
+          "score": 1.0,
+          "method": "direct",
+          "sentence_cosine": 1.0
+        }
+      ],
+      "modalities": "pdf -> reference",
+      "query_words": 98
+    }
+  ],
+  "boilerplate_overlaps": [],
+  "ai_analysis": {
+    "probability": 0.5,
+    "method": "logistic regression calibrated on HC3 + SAGE (GPT-4.1 / Claude 3.7 / Gemini 2.5) (CV AUROC 0.91)",
+    "logit_contributions": {
+      "log_perplexity": -1.108,
+      "burstiness": -3.406,
+      "marker_rate": -1.187,
+      "classifier": -0.136
+    },
+    "intercept": 0.531,
+    "signals": {
+      "marker_rate": 0.0,
+      "log_perplexity": 3.7139,
+      "perplexity": 41.0119,
+      "burstiness": 1.3884,
+      "tokens_scored": 238,
+      "classifier": 0.0002
+    },
+    "words_analysed": 196
+  },
+  "explanations": "No meaningful overlap with other submissions. 50.8% matches external reference material: Scooter-sharing system (50.8%). Strongest evidence: p.1 <-> Scooter-sharing system ¶1 (verbatim, cos 0.61). AI-content likelihood 0%; strongest signal: burstiness; advisory only - corroborate before acting. Overall risk: HIGH.",
+  "score_details": {
+    "scoring_words": 193,
+    "boilerplate_words_excluded": 0,
+    "reference_words_excluded": 0,
+    "per_source_peer": {},
+    "per_source_external": {
+      "Scooter-sharing system": 50.8
+    },
+    "top_peer_source": null,
+    "chunks_indexed": 2,
+    "thresholds": {
+      "chunk_candidate": 0.55,
+      "sentence_direct": 0.8,
+      "cross_encoder": 0.6,
+      "min_passage_sentences": 2
+    }
+  },
+  "warnings": [],
+  "metadata": {
+    "size_bytes": 2583,
+    "pages": 1,
+    "header_footer_blocks_removed": 0,
+    "extraction_seconds": 0.0
+  }
+}

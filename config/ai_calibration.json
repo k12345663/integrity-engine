@@ -1,0 +1,56 @@
+{
+  "source": "HC3 + SAGE (GPT-4.1 / Claude 3.7 / Gemini 2.5)",
+  "n_samples": 577,
+  "features": [
+    "log_perplexity",
+    "burstiness",
+    "marker_rate",
+    "classifier"
+  ],
+  "mean": [
+    3.193152336106879,
+    0.5209213723518391,
+    0.2806625751725867,
+    0.2167568971214096
+  ],
+  "std": [
+    0.5793924191239043,
+    0.1821924463022882,
+    0.4911033448809704,
+    0.38297914623545926
+  ],
+  "coef": [
+    -1.2332727156309866,
+    -1.1352128751805404,
+    2.0777945283140506,
+    0.24010754410944643
+  ],
+  "intercept": 0.5308515117014637,
+  "cv_auroc": 0.9065102286401925,
+  "cv_accuracy_at_0.5": 0.8353552859618717,
+  "single_feature_auroc": {
+    "log_perplexity": 0.6957280385078219,
+    "burstiness": 0.7832851985559566,
+    "marker_rate": 0.7260529482551143,
+    "classifier": 0.6678459687123947
+  },
+  "per_source_feature_auroc (direction: higher=AI)": {
+    "hc3": {
+      "log_perplexity": 0.9983416252072969,
+      "burstiness": 0.36849087893864013,
+      "marker_rate": 0.5157545605306799,
+      "classifier": 0.9781094527363184
+    },
+    "sage": {
+      "log_perplexity": 0.6209297052154195,
+      "burstiness": 0.15829931972789113,
+      "marker_rate": 0.8295124716553288,
+      "classifier": 0.5489002267573696
+    }
+  },
+  "cross_source_transfer_auroc": {
+    "train_hc3_test_sage": 0.56578231292517,
+    "train_sage_test_hc3": 0.20630182421227194
+  },
+  "seed": 13
+}

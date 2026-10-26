@@ -1,0 +1,17 @@
+[project]
+name = "integrity-engine"
+version = "1.0.0"
+description = "Multimodal submission integrity and plagiarism detection engine (PDF, DOCX, MP4)"
+requires-python = ">=3.9"
+
+[tool.ruff]
+line-length = 120
+target-version = "py39"
+extend-exclude = [".bootstrap", ".cache"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E731"]
+
+[tool.pytest.ini_options]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::FutureWarning", "ignore::UserWarning"]

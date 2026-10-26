@@ -1,0 +1,60 @@
+# Default configuration. Every key is optional; omitted keys keep the
+# defaults defined in integrity_engine/config.py. Use with:
+#   python run_integrity_check.py --input_dir ... --config config/default.yaml
+# or override single values: --set matching.sentence_threshold=0.85
+
+chunking:
+  max_tokens: 200          # MiniLM word pieces per chunk (model limit 256)
+  min_tokens: 40           # shorter tails are merged into the previous chunk
+  overlap_sentences: 1     # sentence overlap between consecutive chunks
+
+embedding:
+  model_name: sentence-transformers/all-MiniLM-L6-v2
+  device: null             # null = cuda if available, else cpu
+
+matching:
+  top_k: 10                         # neighbours per query chunk (stage 1)
+  chunk_candidate_threshold: 0.55   # loose: recall-oriented retrieval
+  sentence_threshold: 0.80          # direct path (verbatim / transcript)
+  cross_encoder_model: cross-encoder/stsb-distilroberta-base
+  window_sizes: [2, 3]               # mixed sizes catch paraphrase at paragraph edges
+  loo_attribution: true             # drop window sentences whose removal raises the score
+  window_prefilter: 0.60
+  cross_encoder_threshold: 0.60     # verified paraphrase path
+  require_anchor: true              # paraphrase must share a rare number/name...
+  cross_encoder_strong: 0.80        # ...unless the cross-encoder is this sure
+  anchor_max_doc_fraction: 0.10
+  min_passage_sentences: 2
+  single_sentence_threshold: 0.90
+  index_type: flat                  # flat (exact) | hnsw (approximate)
+
+boilerplate:
+  enabled: true
+  near_duplicate_threshold: 0.92
+  min_doc_frequency: 3
+  min_doc_fraction: 0.25
+  template_dir: null       # folder of organiser prompt .txt files, if known
+
+external:
+  reference_dir: reference_corpus
+  online: false            # true = also query the free Wikipedia API
+
+ai:
+  enabled: true
+  perplexity_model: gpt2
+  classifier_model: openai-community/roberta-base-openai-detector
+  min_words: 120
+  calibration_file: config/ai_calibration.json
+
+asr:
+  model_name: base.en
+  silence_rms_threshold: 0.003
+  no_speech_prob_threshold: 0.6
+
+risk:
+  high_peer: 30.0
+  high_external: 30.0
+  medium_peer: 10.0
+  medium_external: 10.0
+  ai_high: 80.0
+  ai_medium: 60.0

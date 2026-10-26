@@ -1,0 +1,58 @@
+2026-10-26 16:54:52,545 INFO    faiss.loader: Loading faiss.
+2026-10-26 16:54:52,583 INFO    faiss.loader: Successfully loaded faiss.
+2026-10-26 16:54:52,612 INFO    integrity_engine.pipeline: Discovered 15 files in ./sample_submissions
+2026-10-26 16:54:52,653 WARNING integrity_engine.ingestion: corrupt_14.docx: DOCX is corrupted or not an Office Open XML file - flagged and skipped
+2026-10-26 16:54:52,653 INFO    integrity_engine.pipeline: corrupt_14.docx                          docx   flagged     0 sentences
+2026-10-26 16:54:52,653 WARNING integrity_engine.ingestion: empty_13.pdf: empty file (0 bytes), flagged and skipped
+2026-10-26 16:54:52,653 INFO    integrity_engine.pipeline: empty_13.pdf                             pdf    flagged     0 sentences
+2026-10-26 16:54:54,207 INFO    integrity_engine.pipeline: pitch_10_sanjay.mp4                      media  ok          6 sentences
+2026-10-26 16:54:54,731 INFO    integrity_engine.pipeline: pitch_11_leela.mp4                       media  ok          5 sentences
+2026-10-26 16:54:54,746 WARNING integrity_engine.ingestion: silent_12.mp4: Video has no audio track; nothing to transcribe - flagged and skipped
+2026-10-26 16:54:54,746 INFO    integrity_engine.pipeline: silent_12.mp4                            media  flagged     0 sentences
+2026-10-26 16:54:55,225 INFO    integrity_engine.pipeline: sub_01_aarav.pdf                         pdf    ok         44 sentences
+2026-10-26 16:54:55,230 INFO    integrity_engine.pipeline: sub_02_meera.pdf                         pdf    ok         31 sentences
+2026-10-26 16:54:55,234 INFO    integrity_engine.pipeline: sub_03_kabir.docx                        docx   ok         28 sentences
+2026-10-26 16:54:55,237 INFO    integrity_engine.pipeline: sub_04_diya.docx                         docx   ok         25 sentences
+2026-10-26 16:54:55,240 INFO    integrity_engine.pipeline: sub_05_rohan.docx                        docx   ok         25 sentences
+2026-10-26 16:54:55,242 INFO    integrity_engine.pipeline: sub_06_ananya.pdf                        pdf    ok         14 sentences
+2026-10-26 16:54:55,249 INFO    integrity_engine.pipeline: sub_07_ishaan.docx                       docx   ok         14 sentences
+2026-10-26 16:54:55,251 INFO    integrity_engine.pipeline: sub_08_zara.pdf                          pdf    ok         16 sentences
+2026-10-26 16:54:55,253 INFO    integrity_engine.pipeline: sub_09_vikram.docx                       docx   ok         10 sentences
+2026-10-26 16:54:55,255 INFO    integrity_engine.pipeline: sub_15_tanvi.pdf                         pdf    ok         16 sentences
+2026-10-26 16:54:58,886 INFO    integrity_engine.embeddings: Loading embedding model sentence-transformers/all-MiniLM-L6-v2 on cpu
+2026-10-26 16:55:00,950 INFO    httpx2: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-10-26 16:55:01,643 INFO    httpx2: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-26 16:55:01,901 INFO    httpx2: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-26 16:55:02,254 INFO    httpx2: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-10-26 16:55:02,255 WARNING huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-10-26 16:55:02,588 INFO    integrity_engine.boilerplate: Boilerplate: 45 sentences marked (DF threshold 3 over 12 documents)
+2026-10-26 16:55:03,363 INFO    integrity_engine.reference_kb: Loaded 11 reference documents from reference_corpus
+2026-10-26 16:55:07,325 INFO    httpx2: HTTP Request: GET https://huggingface.co/api/models/cross-encoder/stsb-distilroberta-base "HTTP/1.1 200 OK"
+2026-10-26 16:55:07,792 INFO    httpx2: HTTP Request: HEAD https://huggingface.co/cross-encoder/stsb-distilroberta-base/resolve/6b71347df6e2b34246b53e06d6bce70ef67de368/modules.json "HTTP/1.1 404 Not Found"
+2026-10-26 16:55:08,106 INFO    httpx2: HTTP Request: GET https://huggingface.co/api/models/cross-encoder/stsb-distilroberta-base/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-26 16:55:08,380 INFO    httpx2: HTTP Request: GET https://huggingface.co/api/models/cross-encoder/stsb-distilroberta-base/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-26 16:55:08,495 INFO    integrity_engine.verification: Loaded cross-encoder cross-encoder/stsb-distilroberta-base
+2026-10-26 16:55:09,687 INFO    integrity_engine.pipeline: pitch_10_sanjay.mp4                      risk=HIGH   peer= 81.2% ext=  0.0% ai=None
+2026-10-26 16:55:09,687 INFO    integrity_engine.pipeline: pitch_11_leela.mp4                       risk=LOW    peer=  0.0% ext=  0.0% ai=None
+2026-10-26 16:55:12,084 INFO    httpx2: HTTP Request: GET https://huggingface.co/api/models/gpt2 "HTTP/1.1 307 Temporary Redirect"
+2026-10-26 16:55:12,473 INFO    httpx2: HTTP Request: GET https://huggingface.co/api/models/openai-community/gpt2 "HTTP/1.1 200 OK"
+2026-10-26 16:55:12,787 INFO    httpx2: HTTP Request: GET https://huggingface.co/api/models/gpt2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-10-26 16:55:13,094 INFO    httpx2: HTTP Request: GET https://huggingface.co/api/models/openai-community/gpt2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-26 16:55:13,417 INFO    httpx2: HTTP Request: GET https://huggingface.co/api/models/gpt2/tree/main?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-10-26 16:55:13,688 INFO    httpx2: HTTP Request: GET https://huggingface.co/api/models/openai-community/gpt2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-26 16:55:14,032 INFO    httpx2: HTTP Request: GET https://huggingface.co/api/models/gpt2 "HTTP/1.1 307 Temporary Redirect"
+2026-10-26 16:55:14,314 INFO    httpx2: HTTP Request: GET https://huggingface.co/api/models/openai-community/gpt2 "HTTP/1.1 200 OK"
+2026-10-26 16:55:15,972 INFO    httpx2: HTTP Request: GET https://huggingface.co/api/models/openai-community/roberta-base-openai-detector "HTTP/1.1 200 OK"
+2026-10-26 16:55:16,290 INFO    httpx2: HTTP Request: GET https://huggingface.co/api/models/openai-community/roberta-base-openai-detector/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-10-26 16:55:16,590 INFO    httpx2: HTTP Request: GET https://huggingface.co/api/models/openai-community/roberta-base-openai-detector/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-10-26 16:55:17,658 INFO    integrity_engine.pipeline: sub_01_aarav.pdf                         risk=HIGH   peer= 44.3% ext=  0.0% ai=0.1
+2026-10-26 16:55:18,531 INFO    integrity_engine.pipeline: sub_02_meera.pdf                         risk=HIGH   peer= 45.2% ext=  0.0% ai=1.3
+2026-10-26 16:55:20,183 INFO    integrity_engine.pipeline: sub_03_kabir.docx                        risk=HIGH   peer= 89.4% ext=  0.0% ai=0.1
+2026-10-26 16:55:21,391 INFO    integrity_engine.pipeline: sub_04_diya.docx                         risk=HIGH   peer= 71.1% ext=  0.0% ai=0.1
+2026-10-26 16:55:22,278 INFO    integrity_engine.pipeline: sub_05_rohan.docx                        risk=LOW    peer=  0.0% ext=  0.0% ai=0.1
+2026-10-26 16:55:23,023 INFO    integrity_engine.pipeline: sub_06_ananya.pdf                        risk=HIGH   peer=  0.0% ext= 50.8% ai=0.5
+2026-10-26 16:55:23,858 INFO    integrity_engine.pipeline: sub_07_ishaan.docx                       risk=MEDIUM peer=  0.0% ext=  0.0% ai=99.7
+2026-10-26 16:55:24,590 INFO    integrity_engine.pipeline: sub_08_zara.pdf                          risk=LOW    peer=  0.0% ext=  0.0% ai=0.6
+2026-10-26 16:55:24,688 INFO    integrity_engine.pipeline: sub_09_vikram.docx                       risk=LOW    peer=  0.0% ext=  0.0% ai=0.0
+2026-10-26 16:55:25,239 INFO    integrity_engine.pipeline: sub_15_tanvi.pdf                         risk=MEDIUM peer=  0.0% ext=  0.0% ai=86.1
+2026-10-26 16:55:25,241 INFO    integrity_engine.pipeline: Finished in 32.6s; reports written to reports

@@ -1,0 +1,190 @@
+{
+  "description": "Synthetic case-competition corpus (fictional company VoltRide Mobility). All people, companies and figures are fictional; Wikipedia passages are CC BY-SA 4.0.",
+  "passage_note": "source_passages / target_passages name variables in scripts/dataset_content.py; they give sentence-level ground truth for evaluate.py.",
+  "authorship_disclosure": "All texts were drafted with an AI assistant. 'Human' submissions were written to imitate student prose (specific numbers, first person, uneven sentence length); 'ai_generated' ones use unedited assistant-style prose. AI-detection results on this corpus therefore measure style separation, not real-world accuracy.",
+  "files": {
+    "sub_01_aarav.pdf": {
+      "label": "original",
+      "ai_generated": false,
+      "contains_case_prompt": true,
+      "notes": "Source document: paragraphs copied by sub_02 and read aloud in pitch_10.",
+      "expected_status": "ok",
+      "format": "pdf"
+    },
+    "sub_02_meera.pdf": {
+      "label": "partial_exact_copy",
+      "ai_generated": false,
+      "contains_case_prompt": true,
+      "expected_status": "ok",
+      "format": "pdf"
+    },
+    "sub_03_kabir.docx": {
+      "label": "original",
+      "ai_generated": false,
+      "contains_case_prompt": true,
+      "expected_status": "ok",
+      "format": "docx"
+    },
+    "sub_04_diya.docx": {
+      "label": "paraphrase",
+      "ai_generated": false,
+      "contains_case_prompt": true,
+      "expected_status": "ok",
+      "format": "docx"
+    },
+    "sub_05_rohan.docx": {
+      "label": "original_independent",
+      "ai_generated": false,
+      "contains_case_prompt": true,
+      "expected_status": "ok",
+      "format": "docx"
+    },
+    "sub_06_ananya.pdf": {
+      "label": "external_copy",
+      "ai_generated": false,
+      "contains_case_prompt": false,
+      "expected_status": "ok",
+      "format": "pdf"
+    },
+    "sub_07_ishaan.docx": {
+      "label": "ai_generated",
+      "ai_generated": true,
+      "contains_case_prompt": false,
+      "expected_status": "ok",
+      "format": "docx"
+    },
+    "sub_08_zara.pdf": {
+      "label": "original_heavily_formatted",
+      "ai_generated": false,
+      "contains_case_prompt": false,
+      "notes": "Two-column layout, table, repeated header/footer on every page.",
+      "expected_status": "ok",
+      "format": "pdf"
+    },
+    "sub_09_vikram.docx": {
+      "label": "original_independent",
+      "ai_generated": false,
+      "contains_case_prompt": false,
+      "expected_status": "ok",
+      "format": "docx"
+    },
+    "pitch_10_sanjay.mp4": {
+      "label": "cross_modal_copy",
+      "ai_generated": false,
+      "contains_case_prompt": false,
+      "notes": "Indian-English TTS voice reads sub_01 page 2 recommendation verbatim.",
+      "expected_status": "ok",
+      "format": "mp4"
+    },
+    "pitch_11_leela.mp4": {
+      "label": "original",
+      "ai_generated": false,
+      "contains_case_prompt": false,
+      "notes": "British-English TTS voice; original content.",
+      "expected_status": "ok",
+      "format": "mp4"
+    },
+    "silent_12.mp4": {
+      "label": "degraded_no_audio",
+      "ai_generated": false,
+      "expected_status": "flagged",
+      "format": "mp4"
+    },
+    "empty_13.pdf": {
+      "label": "degraded_zero_byte",
+      "ai_generated": false,
+      "expected_status": "flagged",
+      "format": "pdf"
+    },
+    "corrupt_14.docx": {
+      "label": "degraded_corrupted",
+      "ai_generated": false,
+      "expected_status": "flagged",
+      "format": "docx"
+    },
+    "sub_15_tanvi.pdf": {
+      "label": "ai_generated",
+      "ai_generated": true,
+      "contains_case_prompt": false,
+      "expected_status": "ok",
+      "format": "pdf"
+    }
+  },
+  "relationships": [
+    {
+      "type": "exact_copy",
+      "source": "sub_01_aarav.pdf",
+      "target": "sub_02_meera.pdf",
+      "source_location": {
+        "page": 2
+      },
+      "target_location": {
+        "page": 2
+      },
+      "source_passages": [
+        "A_RISK_Y",
+        "A_RISK_Z"
+      ],
+      "target_passages": [
+        "A_RISK_Y",
+        "A_RISK_Z"
+      ],
+      "description": "Two risk paragraphs copied verbatim."
+    },
+    {
+      "type": "paraphrase",
+      "source": "sub_03_kabir.docx",
+      "target": "sub_04_diya.docx",
+      "source_passages": [
+        "C_PARAS"
+      ],
+      "target_passages": [
+        "D_PARAS"
+      ],
+      "description": "All four argument paragraphs reworded with synonyms and new sentence structure."
+    },
+    {
+      "type": "cross_modal",
+      "source": "sub_01_aarav.pdf",
+      "target": "pitch_10_sanjay.mp4",
+      "source_location": {
+        "page": 2
+      },
+      "source_passages": [
+        "A_RECOMMENDATION_X"
+      ],
+      "target_passages": [
+        "A_RECOMMENDATION_X"
+      ],
+      "description": "Recommendation paragraph read aloud in the video pitch."
+    },
+    {
+      "type": "external_copy",
+      "source": "ref:Scooter-sharing system",
+      "target": "sub_06_ananya.pdf",
+      "source_location": {
+        "url": "https://en.wikipedia.org/wiki/Scooter-sharing_system"
+      },
+      "source_passages": [],
+      "target_passages": [
+        "WIKI_COPY_1",
+        "WIKI_COPY_2"
+      ],
+      "description": "Two background paragraphs lifted from Wikipedia."
+    }
+  ],
+  "boilerplate": {
+    "files": [
+      "sub_01_aarav.pdf",
+      "sub_02_meera.pdf",
+      "sub_03_kabir.docx",
+      "sub_04_diya.docx",
+      "sub_05_rohan.docx"
+    ],
+    "passage_ids": [
+      "CASE_PROMPT",
+      "SHARED_REFERENCES"
+    ],
+    "description": "Identical 150-word case prompt plus shared citation list; answers are original (apart from the relationships above)."
+  }
+}

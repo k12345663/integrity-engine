@@ -1,0 +1,98 @@
+{
+  "MRPC": {
+    "n_test": 1725,
+    "positive_rate": 0.665,
+    "rows": {
+      "jaccard (threshold 0.30 tuned on validation)": {
+        "precision": 0.71,
+        "recall": 0.962,
+        "f1": 0.817,
+        "accuracy": 0.713,
+        "auroc": 0.757
+      },
+      "levenshtein (threshold 0.58 tuned on validation)": {
+        "precision": 0.72,
+        "recall": 0.916,
+        "f1": 0.806,
+        "accuracy": 0.707,
+        "auroc": 0.748
+      },
+      "cosine (threshold 0.56 tuned on validation)": {
+        "precision": 0.7,
+        "recall": 0.968,
+        "f1": 0.812,
+        "accuracy": 0.703,
+        "auroc": 0.736
+      },
+      "cross-encoder score (AUROC only)": {
+        "auroc": 0.838
+      },
+      "engine: direct path only (cos >= 0.80, fixed)": {
+        "precision": 0.803,
+        "recall": 0.649,
+        "f1": 0.718,
+        "accuracy": 0.661
+      },
+      "engine: direct OR cross-encoder (fixed)": {
+        "precision": 0.764,
+        "recall": 0.92,
+        "f1": 0.835,
+        "accuracy": 0.758
+      },
+      "engine: direct OR cross-encoder + anchor rule (fixed, default)": {
+        "precision": 0.786,
+        "recall": 0.84,
+        "f1": 0.812,
+        "accuracy": 0.742
+      }
+    }
+  },
+  "PAWS": {
+    "n_test": 8000,
+    "positive_rate": 0.442,
+    "rows": {
+      "jaccard (threshold 0.77 tuned on validation)": {
+        "precision": 0.45,
+        "recall": 0.995,
+        "f1": 0.62,
+        "accuracy": 0.461,
+        "auroc": 0.498
+      },
+      "levenshtein (threshold 0.82 tuned on validation)": {
+        "precision": 0.582,
+        "recall": 0.77,
+        "f1": 0.663,
+        "accuracy": 0.654,
+        "auroc": 0.759
+      },
+      "cosine (threshold 0.60 tuned on validation)": {
+        "precision": 0.442,
+        "recall": 1.0,
+        "f1": 0.613,
+        "accuracy": 0.442,
+        "auroc": 0.631
+      },
+      "cross-encoder score (AUROC only)": {
+        "auroc": 0.527
+      },
+      "engine: direct path only (cos >= 0.80, fixed)": {
+        "precision": 0.444,
+        "recall": 0.986,
+        "f1": 0.612,
+        "accuracy": 0.447
+      },
+      "engine: direct OR cross-encoder (fixed)": {
+        "precision": 0.442,
+        "recall": 1.0,
+        "f1": 0.613,
+        "accuracy": 0.442
+      },
+      "engine: direct OR cross-encoder + anchor rule (fixed, default)": {
+        "precision": 0.442,
+        "recall": 0.999,
+        "f1": 0.613,
+        "accuracy": 0.443
+      }
+    }
+  }
+}

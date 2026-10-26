@@ -1,0 +1,58 @@
+{
+  "document_id": "sub_15_tanvi.pdf",
+  "modality": "pdf",
+  "status": "ok",
+  "total_integrity_risk": "MEDIUM",
+  "scores": {
+    "peer_similarity_percentage": 0.0,
+    "external_similarity_percentage": 0.0,
+    "ai_generated_probability": 86.1
+  },
+  "peer_matches": [],
+  "multimodal_matches": [],
+  "external_matches": [],
+  "boilerplate_overlaps": [],
+  "ai_analysis": {
+    "probability": 86.1,
+    "method": "logistic regression calibrated on HC3 + SAGE (GPT-4.1 / Claude 3.7 / Gemini 2.5) (CV AUROC 0.91)",
+    "logit_contributions": {
+      "log_perplexity": -1.397,
+      "burstiness": -3.406,
+      "marker_rate": 6.233,
+      "classifier": -0.136
+    },
+    "intercept": 0.531,
+    "signals": {
+      "marker_rate": 7.9208,
+      "log_perplexity": 3.8497,
+      "perplexity": 46.9782,
+      "burstiness": 1.2554,
+      "tokens_scored": 276,
+      "classifier": 0.0005
+    },
+    "words_analysed": 213
+  },
+  "explanations": "No meaningful overlap with other submissions. AI-content likelihood 86%; strongest signal: marker_rate; advisory only - corroborate before acting. Overall risk: MEDIUM.",
+  "score_details": {
+    "scoring_words": 210,
+    "boilerplate_words_excluded": 0,
+    "reference_words_excluded": 0,
+    "per_source_peer": {},
+    "per_source_external": {},
+    "top_peer_source": null,
+    "chunks_indexed": 2,
+    "thresholds": {
+      "chunk_candidate": 0.55,
+      "sentence_direct": 0.8,
+      "cross_encoder": 0.6,
+      "min_passage_sentences": 2
+    }
+  },
+  "warnings": [],
+  "metadata": {
+    "size_bytes": 2901,
+    "pages": 1,
+    "header_footer_blocks_removed": 0,
+    "extraction_seconds": 0.0
+  }
+}

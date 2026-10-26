@@ -1,0 +1,996 @@
+{
+  "main": {
+    "ingestion": {
+      "rows": [
+        {
+          "file": "sub_01_aarav.pdf",
+          "expected": "ok",
+          "actual": "ok",
+          "ok": true,
+          "warning": ""
+        },
+        {
+          "file": "sub_02_meera.pdf",
+          "expected": "ok",
+          "actual": "ok",
+          "ok": true,
+          "warning": ""
+        },
+        {
+          "file": "sub_03_kabir.docx",
+          "expected": "ok",
+          "actual": "ok",
+          "ok": true,
+          "warning": ""
+        },
+        {
+          "file": "sub_04_diya.docx",
+          "expected": "ok",
+          "actual": "ok",
+          "ok": true,
+          "warning": ""
+        },
+        {
+          "file": "sub_05_rohan.docx",
+          "expected": "ok",
+          "actual": "ok",
+          "ok": true,
+          "warning": ""
+        },
+        {
+          "file": "sub_06_ananya.pdf",
+          "expected": "ok",
+          "actual": "ok",
+          "ok": true,
+          "warning": ""
+        },
+        {
+          "file": "sub_07_ishaan.docx",
+          "expected": "ok",
+          "actual": "ok",
+          "ok": true,
+          "warning": ""
+        },
+        {
+          "file": "sub_08_zara.pdf",
+          "expected": "ok",
+          "actual": "ok",
+          "ok": true,
+          "warning": ""
+        },
+        {
+          "file": "sub_09_vikram.docx",
+          "expected": "ok",
+          "actual": "ok",
+          "ok": true,
+          "warning": ""
+        },
+        {
+          "file": "pitch_10_sanjay.mp4",
+          "expected": "ok",
+          "actual": "ok",
+          "ok": true,
+          "warning": ""
+        },
+        {
+          "file": "pitch_11_leela.mp4",
+          "expected": "ok",
+          "actual": "ok",
+          "ok": true,
+          "warning": ""
+        },
+        {
+          "file": "silent_12.mp4",
+          "expected": "flagged",
+          "actual": "flagged",
+          "ok": true,
+          "warning": "Video has no audio track; nothing to transcribe"
+        },
+        {
+          "file": "empty_13.pdf",
+          "expected": "flagged",
+          "actual": "flagged",
+          "ok": true,
+          "warning": "File is empty (0 bytes)"
+        },
+        {
+          "file": "corrupt_14.docx",
+          "expected": "flagged",
+          "actual": "flagged",
+          "ok": true,
+          "warning": "DOCX is corrupted or not an Office Open XML file"
+        },
+        {
+          "file": "sub_15_tanvi.pdf",
+          "expected": "ok",
+          "actual": "ok",
+          "ok": true,
+          "warning": ""
+        }
+      ],
+      "accuracy": 1.0,
+      "pipeline_completed": true
+    },
+    "peer_pairs": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 63,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pairs": 66,
+      "errors": []
+    },
+    "peer_by_type": {
+      "exact_copy": {
+        "pair": [
+          "sub_01_aarav.pdf",
+          "sub_02_meera.pdf"
+        ],
+        "pair_score": 45.2
+      },
+      "paraphrase": {
+        "pair": [
+          "sub_03_kabir.docx",
+          "sub_04_diya.docx"
+        ],
+        "pair_score": 89.4
+      },
+      "cross_modal": {
+        "pair": [
+          "sub_01_aarav.pdf",
+          "pitch_10_sanjay.mp4"
+        ],
+        "pair_score": 81.2
+      }
+    },
+    "localisation": [
+      {
+        "relationship": "exact_copy",
+        "target": "sub_02_meera.pdf",
+        "evidence_passages": 1,
+        "expected_source_page": 2,
+        "reported_source_pages": [
+          2
+        ],
+        "page_correct": true,
+        "video_timestamps": []
+      },
+      {
+        "relationship": "paraphrase",
+        "target": "sub_04_diya.docx",
+        "evidence_passages": 1,
+        "expected_source_page": null,
+        "reported_source_pages": [
+          1
+        ],
+        "page_correct": null,
+        "video_timestamps": []
+      },
+      {
+        "relationship": "cross_modal",
+        "target": "pitch_10_sanjay.mp4",
+        "evidence_passages": 1,
+        "expected_source_page": 2,
+        "reported_source_pages": [
+          2
+        ],
+        "page_correct": true,
+        "video_timestamps": [
+          "00:00:04 - 00:00:24"
+        ]
+      }
+    ],
+    "external": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "tn": 11,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "rows": [
+        {
+          "file": "sub_06_ananya.pdf",
+          "external_pct": 50.8,
+          "sources": [
+            "Scooter-sharing system"
+          ],
+          "truth": true
+        }
+      ]
+    },
+    "ai": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "tn": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "auroc": 1.0,
+      "rows": [
+        {
+          "file": "sub_07_ishaan.docx",
+          "probability": 99.7,
+          "truth": true
+        },
+        {
+          "file": "sub_15_tanvi.pdf",
+          "probability": 86.1,
+          "truth": true
+        },
+        {
+          "file": "sub_02_meera.pdf",
+          "probability": 1.3,
+          "truth": false
+        },
+        {
+          "file": "sub_08_zara.pdf",
+          "probability": 0.6,
+          "truth": false
+        },
+        {
+          "file": "sub_06_ananya.pdf",
+          "probability": 0.5,
+          "truth": false
+        },
+        {
+          "file": "sub_01_aarav.pdf",
+          "probability": 0.1,
+          "truth": false
+        },
+        {
+          "file": "sub_03_kabir.docx",
+          "probability": 0.1,
+          "truth": false
+        },
+        {
+          "file": "sub_04_diya.docx",
+          "probability": 0.1,
+          "truth": false
+        },
+        {
+          "file": "sub_05_rohan.docx",
+          "probability": 0.1,
+          "truth": false
+        },
+        {
+          "file": "sub_09_vikram.docx",
+          "probability": 0.0,
+          "truth": false
+        }
+      ],
+      "not_estimated": [
+        "pitch_10_sanjay.mp4",
+        "pitch_11_leela.mp4"
+      ]
+    },
+    "boilerplate": {
+      "rows": [
+        {
+          "file": "sub_01_aarav.pdf",
+          "template_words_excluded": 147,
+          "peer_pct": 44.3,
+          "risk": "HIGH"
+        },
+        {
+          "file": "sub_02_meera.pdf",
+          "template_words_excluded": 147,
+          "peer_pct": 45.2,
+          "risk": "HIGH"
+        },
+        {
+          "file": "sub_03_kabir.docx",
+          "template_words_excluded": 147,
+          "peer_pct": 89.4,
+          "risk": "HIGH"
+        },
+        {
+          "file": "sub_04_diya.docx",
+          "template_words_excluded": 147,
+          "peer_pct": 71.1,
+          "risk": "HIGH"
+        },
+        {
+          "file": "sub_05_rohan.docx",
+          "template_words_excluded": 147,
+          "peer_pct": 0.0,
+          "risk": "LOW"
+        }
+      ],
+      "template_only_pairs": 8,
+      "template_only_pairs_flagged": 0
+    },
+    "risk": {
+      "rows": [
+        {
+          "file": "sub_01_aarav.pdf",
+          "expected": "HIGH",
+          "actual": "HIGH",
+          "ok": true
+        },
+        {
+          "file": "sub_02_meera.pdf",
+          "expected": "HIGH",
+          "actual": "HIGH",
+          "ok": true
+        },
+        {
+          "file": "sub_03_kabir.docx",
+          "expected": "HIGH",
+          "actual": "HIGH",
+          "ok": true
+        },
+        {
+          "file": "sub_04_diya.docx",
+          "expected": "HIGH",
+          "actual": "HIGH",
+          "ok": true
+        },
+        {
+          "file": "sub_05_rohan.docx",
+          "expected": "LOW",
+          "actual": "LOW",
+          "ok": true
+        },
+        {
+          "file": "sub_06_ananya.pdf",
+          "expected": "HIGH",
+          "actual": "HIGH",
+          "ok": true
+        },
+        {
+          "file": "sub_07_ishaan.docx",
+          "expected": "MEDIUM",
+          "actual": "MEDIUM",
+          "ok": true
+        },
+        {
+          "file": "sub_08_zara.pdf",
+          "expected": "LOW",
+          "actual": "LOW",
+          "ok": true
+        },
+        {
+          "file": "sub_09_vikram.docx",
+          "expected": "LOW",
+          "actual": "LOW",
+          "ok": true
+        },
+        {
+          "file": "pitch_10_sanjay.mp4",
+          "expected": "HIGH",
+          "actual": "HIGH",
+          "ok": true
+        },
+        {
+          "file": "pitch_11_leela.mp4",
+          "expected": "LOW",
+          "actual": "LOW",
+          "ok": true
+        },
+        {
+          "file": "silent_12.mp4",
+          "expected": "UNASSESSED",
+          "actual": "UNASSESSED",
+          "ok": true
+        },
+        {
+          "file": "empty_13.pdf",
+          "expected": "UNASSESSED",
+          "actual": "UNASSESSED",
+          "ok": true
+        },
+        {
+          "file": "corrupt_14.docx",
+          "expected": "UNASSESSED",
+          "actual": "UNASSESSED",
+          "ok": true
+        },
+        {
+          "file": "sub_15_tanvi.pdf",
+          "expected": "MEDIUM",
+          "actual": "MEDIUM",
+          "ok": true
+        }
+      ],
+      "accuracy": 1.0
+    }
+  },
+  "timing": {
+    "ingest_seconds": 2.7
+  },
+  "lexical": {
+    "shingle_baseline": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 1,
+      "tn": 63,
+      "precision": 1.0,
+      "recall": 0.667,
+      "f1": 0.8
+    },
+    "evidence_lexical_vs_semantic": [
+      {
+        "type": "exact_copy",
+        "semantic_chunk_cosine": 0.947,
+        "sentence_evidence": 1.0,
+        "evidence": "sentence cosine",
+        "jaccard": 1.0,
+        "levenshtein_ratio": 1.0
+      },
+      {
+        "type": "paraphrase",
+        "semantic_chunk_cosine": 0.802,
+        "sentence_evidence": 0.643,
+        "evidence": "cross-encoder verified paraphrase",
+        "jaccard": 0.235,
+        "levenshtein_ratio": 0.513
+      },
+      {
+        "type": "cross_modal",
+        "semantic_chunk_cosine": 0.822,
+        "sentence_evidence": 0.951,
+        "evidence": "sentence cosine + cross-encoder verified paraphrase",
+        "jaccard": 0.764,
+        "levenshtein_ratio": 0.952
+      }
+    ]
+  },
+  "sentence_level": {
+    "micro": {
+      "tp": 42,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.933,
+      "f1": 0.966
+    },
+    "per_doc": [
+      {
+        "file": "pitch_10_sanjay.mp4",
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "file": "sub_01_aarav.pdf",
+        "tp": 8,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "file": "sub_02_meera.pdf",
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "file": "sub_03_kabir.docx",
+        "tp": 12,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.923,
+        "f1": 0.96
+      },
+      {
+        "file": "sub_04_diya.docx",
+        "tp": 8,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.8,
+        "f1": 0.889
+      },
+      {
+        "file": "sub_06_ananya.pdf",
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    ]
+  },
+  "asr": {
+    "pitch_10_sanjay.mp4": {
+      "wer": 0.091,
+      "transcript": "Hi everyone, I'm Sanjay from Team Obit, and here is our pitch for Voltride. Our recommendation is to stay in Pune for the next 18 months and build a dense battery swapping network before chasing new cities. Right now each scooter spends almost 40 minutes a day of the road waiting for a van to collect and recharge it. And that idle time is the biggest reason the fleet unsolittle. 20 swap stations near the busiest pickup zones would lift utilization from 5.1 to 6.4 rides per scooter per day. Thank you for listening."
+    },
+    "pitch_11_leela.mp4": {
+      "wer": 0.123,
+      "transcript": "Hello judges, this is Leela from Team Northstar. We believe Volt Ride should launch in Coimbart or with women commuters as the first customer segment. Our interviews showed that many women avoid crowded buses in the evening, and a scooter with a panic button and live trip sharing would feel safer. We would start with 150 scooters near the women's colleges. Thank you."
+    }
+  },
+  "ai_robustness_probe": {
+    "original": {
+      "probability": 99.7,
+      "marker_rate": 9.54,
+      "perplexity": 24.9
+    },
+    "markers_removed": {
+      "probability": 0.6,
+      "marker_rate": 0.0,
+      "perplexity": 46.1
+    }
+  },
+  "ablations": [
+    {
+      "label": "full system (default)",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sentence": {
+        "tp": 42,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.933,
+        "f1": 0.966
+      },
+      "external_f1": 1.0,
+      "template_only_pairs_flagged": 0,
+      "errors": []
+    },
+    {
+      "label": "no boilerplate filter",
+      "tp": 3,
+      "fp": 8,
+      "fn": 0,
+      "precision": 0.273,
+      "recall": 1.0,
+      "f1": 0.429,
+      "sentence": {
+        "tp": 39,
+        "fp": 40,
+        "fn": 6,
+        "precision": 0.494,
+        "recall": 0.867,
+        "f1": 0.629
+      },
+      "external_f1": 1.0,
+      "template_only_pairs_flagged": 8,
+      "errors": [
+        {
+          "pair": [
+            "sub_01_aarav.pdf",
+            "sub_03_kabir.docx"
+          ],
+          "score": 38.9,
+          "type": "FP"
+        },
+        {
+          "pair": [
+            "sub_01_aarav.pdf",
+            "sub_04_diya.docx"
+          ],
+          "score": 37.7,
+          "type": "FP"
+        },
+        {
+          "pair": [
+            "sub_01_aarav.pdf",
+            "sub_05_rohan.docx"
+          ],
+          "score": 41.3,
+          "type": "FP"
+        },
+        {
+          "pair": [
+            "sub_02_meera.pdf",
+            "sub_03_kabir.docx"
+          ],
+          "score": 38.9,
+          "type": "FP"
+        },
+        {
+          "pair": [
+            "sub_02_meera.pdf",
+            "sub_04_diya.docx"
+          ],
+          "score": 37.7,
+          "type": "FP"
+        },
+        {
+          "pair": [
+            "sub_02_meera.pdf",
+            "sub_05_rohan.docx"
+          ],
+          "score": 41.3,
+          "type": "FP"
+        },
+        {
+          "pair": [
+            "sub_03_kabir.docx",
+            "sub_05_rohan.docx"
+          ],
+          "score": 41.3,
+          "type": "FP"
+        },
+        {
+          "pair": [
+            "sub_04_diya.docx",
+            "sub_05_rohan.docx"
+          ],
+          "score": 41.3,
+          "type": "FP"
+        }
+      ]
+    },
+    {
+      "label": "no cross-encoder (bi-encoder only)",
+      "tp": 2,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.667,
+      "recall": 0.667,
+      "f1": 0.667,
+      "sentence": {
+        "tp": 22,
+        "fp": 8,
+        "fn": 23,
+        "precision": 0.733,
+        "recall": 0.489,
+        "f1": 0.587
+      },
+      "external_f1": 1.0,
+      "template_only_pairs_flagged": 1,
+      "errors": [
+        {
+          "pair": [
+            "sub_01_aarav.pdf",
+            "sub_05_rohan.docx"
+          ],
+          "score": 21.9,
+          "type": "FP"
+        },
+        {
+          "pair": [
+            "sub_03_kabir.docx",
+            "sub_04_diya.docx"
+          ],
+          "score": 0.0,
+          "type": "FN"
+        }
+      ]
+    },
+    {
+      "label": "no anchor rule",
+      "tp": 3,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.857,
+      "sentence": {
+        "tp": 44,
+        "fp": 22,
+        "fn": 1,
+        "precision": 0.667,
+        "recall": 0.978,
+        "f1": 0.793
+      },
+      "external_f1": 1.0,
+      "template_only_pairs_flagged": 0,
+      "errors": [
+        {
+          "pair": [
+            "sub_07_ishaan.docx",
+            "sub_15_tanvi.pdf"
+          ],
+          "score": 91.4,
+          "type": "FP"
+        }
+      ]
+    },
+    {
+      "label": "no leave-one-out attribution",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sentence": {
+        "tp": 42,
+        "fp": 3,
+        "fn": 3,
+        "precision": 0.933,
+        "recall": 0.933,
+        "f1": 0.933
+      },
+      "external_f1": 1.0,
+      "template_only_pairs_flagged": 0,
+      "errors": []
+    },
+    {
+      "label": "3-sentence windows only",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sentence": {
+        "tp": 36,
+        "fp": 1,
+        "fn": 9,
+        "precision": 0.973,
+        "recall": 0.8,
+        "f1": 0.878
+      },
+      "external_f1": 1.0,
+      "template_only_pairs_flagged": 0,
+      "errors": []
+    },
+    {
+      "label": "v1 (3-sentence windows, no leave-one-out)",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sentence": {
+        "tp": 38,
+        "fp": 2,
+        "fn": 7,
+        "precision": 0.95,
+        "recall": 0.844,
+        "f1": 0.894
+      },
+      "external_f1": 1.0,
+      "template_only_pairs_flagged": 0,
+      "errors": []
+    },
+    {
+      "label": "single-sentence evidence allowed",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sentence": {
+        "tp": 42,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.933,
+        "f1": 0.966
+      },
+      "external_f1": 1.0,
+      "template_only_pairs_flagged": 0,
+      "errors": []
+    }
+  ],
+  "sweep_sentence_threshold": [
+    {
+      "label": "direct threshold 0.7",
+      "tp": 3,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.857,
+      "sentence": {
+        "tp": 42,
+        "fp": 4,
+        "fn": 3,
+        "precision": 0.913,
+        "recall": 0.933,
+        "f1": 0.923
+      },
+      "external_f1": 1.0,
+      "template_only_pairs_flagged": 0,
+      "errors": [
+        {
+          "pair": [
+            "sub_07_ishaan.docx",
+            "sub_15_tanvi.pdf"
+          ],
+          "score": 22.4,
+          "type": "FP"
+        }
+      ]
+    },
+    {
+      "label": "direct threshold 0.75",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sentence": {
+        "tp": 42,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.933,
+        "f1": 0.966
+      },
+      "external_f1": 1.0,
+      "template_only_pairs_flagged": 0,
+      "errors": []
+    },
+    {
+      "label": "direct threshold 0.8",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sentence": {
+        "tp": 42,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.933,
+        "f1": 0.966
+      },
+      "external_f1": 1.0,
+      "template_only_pairs_flagged": 0,
+      "errors": []
+    },
+    {
+      "label": "direct threshold 0.85",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sentence": {
+        "tp": 42,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.933,
+        "f1": 0.966
+      },
+      "external_f1": 1.0,
+      "template_only_pairs_flagged": 0,
+      "errors": []
+    },
+    {
+      "label": "direct threshold 0.9",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sentence": {
+        "tp": 42,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.933,
+        "f1": 0.966
+      },
+      "external_f1": 1.0,
+      "template_only_pairs_flagged": 0,
+      "errors": []
+    }
+  ],
+  "sweep_cross_encoder_threshold": [
+    {
+      "label": "cross-encoder threshold 0.5",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sentence": {
+        "tp": 42,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.933,
+        "f1": 0.966
+      },
+      "external_f1": 1.0,
+      "template_only_pairs_flagged": 0,
+      "errors": []
+    },
+    {
+      "label": "cross-encoder threshold 0.55",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sentence": {
+        "tp": 42,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.933,
+        "f1": 0.966
+      },
+      "external_f1": 1.0,
+      "template_only_pairs_flagged": 0,
+      "errors": []
+    },
+    {
+      "label": "cross-encoder threshold 0.6",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sentence": {
+        "tp": 42,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.933,
+        "f1": 0.966
+      },
+      "external_f1": 1.0,
+      "template_only_pairs_flagged": 0,
+      "errors": []
+    },
+    {
+      "label": "cross-encoder threshold 0.65",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sentence": {
+        "tp": 34,
+        "fp": 0,
+        "fn": 11,
+        "precision": 1.0,
+        "recall": 0.756,
+        "f1": 0.861
+      },
+      "external_f1": 1.0,
+      "template_only_pairs_flagged": 0,
+      "errors": []
+    },
+    {
+      "label": "cross-encoder threshold 0.7",
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "sentence": {
+        "tp": 31,
+        "fp": 0,
+        "fn": 14,
+        "precision": 1.0,
+        "recall": 0.689,
+        "f1": 0.816
+      },
+      "external_f1": 1.0,
+      "template_only_pairs_flagged": 0,
+      "errors": []
+    }
+  ]
+}
