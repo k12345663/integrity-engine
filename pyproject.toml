@@ -14,4 +14,5 @@ select = ["E", "F", "W", "I"]
 ignore = ["E731"]
 
 [tool.pytest.ini_options]
+pythonpath = ["."]
 filterwarnings = ["ignore::DeprecationWarning", "ignore::FutureWarning", "ignore::UserWarning"]
